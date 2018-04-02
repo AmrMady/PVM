@@ -16,6 +16,9 @@ public class PVM {
      */
     public static void main(String[] args) {
         String fu;
+           String sad;
+              String cx;
+                 String ggg;
     }
     
 }
