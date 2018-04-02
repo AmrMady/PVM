@@ -15,10 +15,7 @@ public class PVM {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String fu;
-           String sad;
-              String cx;
-                 String ggg;
+        int metnak = 0;
     }
     
 }
