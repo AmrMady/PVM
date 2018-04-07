@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Inventory {
     double cash = 0.0;
-    int paste;
-    ArrayList<Topping> toppings;
+    int paste  = 0;
+    ArrayList<Topping> toppings = new ArrayList();
     int[] toppingsCap = new int [toppings.size()];
     
 
@@ -25,7 +25,12 @@ public class Inventory {
         }
     }
     void refill(){
-        
+        Inventory i = new Inventory();
+        i.setPaste(50);
+        i.intializeToppings();
+    }
+
+    public Inventory() {
     }
     public double getCash() {
         return cash;

@@ -10,6 +10,10 @@ package pvm;
  * @author amrsa
  */
 public class Topping {
+
+    public Topping(String name) {
+        this.name = name;
+    }
     String name;
 
     public String getName() {
