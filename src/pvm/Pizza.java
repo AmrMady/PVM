@@ -13,7 +13,6 @@ import java.util.ArrayList;
  */
 public class Pizza {
     float price;
-    String size;
     String type;
     ArrayList<Topping> ToppingList = new ArrayList();
 
@@ -23,14 +22,6 @@ public class Pizza {
 
     public void setPrice(float price) {
         this.price = price;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
     }
 
     public String getType() {

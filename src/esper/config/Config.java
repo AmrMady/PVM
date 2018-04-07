@@ -12,6 +12,7 @@ import events.CleanAndRefill;
 import events.ClosePVM;
 import events.CustomerComplains;
 import events.DiagnosticsRunning;
+import events.Idle;
 import events.MaintainanceModeOn;
 import events.OpenPVM;
 import events.OvenOn;
@@ -65,6 +66,7 @@ public class Config {
         engine.getEPAdministrator().getConfiguration().addEventType(ClosePVM.class);
         engine.getEPAdministrator().getConfiguration().addEventType(CustomerComplains.class);
         engine.getEPAdministrator().getConfiguration().addEventType(DiagnosticsRunning.class);
+        engine.getEPAdministrator().getConfiguration().addEventType(Idle.class);
         engine.getEPAdministrator().getConfiguration().addEventType(MaintainanceModeOn.class);
         engine.getEPAdministrator().getConfiguration().addEventType(OpenPVM.class);
         engine.getEPAdministrator().getConfiguration().addEventType(OvenOn.class);
@@ -102,6 +104,7 @@ public class Config {
          createEPL_ClosePVM();
         createEPL_CustomerComplains();
         createEPL_DiagnosticsRunning();
+        createEPL_Idle();
         createEPL_MaintainanceModeOn();
         createEPL_OpenPVM();
         createEPL_OvenOn();
@@ -168,6 +171,11 @@ public class Config {
     private void createEPL_DiagnosticsRunning() {
          EPStatement statement = engine.getEPAdministrator().createEPL(DiagnosticsRunning.getStatement());
        statement.setSubscriber(new DiagnosticsRunningHandler(pVM));
+    }
+    
+     private void createEPL_Idle() {
+         EPStatement statement = engine.getEPAdministrator().createEPL(Idle.getStatement());
+        statement.setSubscriber(new IdleHandler(pVM));
     }
 
     private void createEPL_MaintainanceModeOn() {
@@ -284,7 +292,4 @@ public class Config {
          EPStatement statement = engine.getEPAdministrator().createEPL(setToIdle.getStatement());
         statement.setSubscriber(new setToIdleHandler(pVM));
     }
-
-
-
 }

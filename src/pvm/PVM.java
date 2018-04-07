@@ -34,7 +34,104 @@ public class PVM {
         this.engine = engine;
     }
 
-    public void Menu(){
+
+    public void ActivateMaintainanceMode(){
+      
+    }
+    public void ActivatePVM(){
+      
+    }
+    public void Baking(){
+      
+    }
+    public void CAR_Done(){
+      
+    }
+    public void CleanAndRefill(){
+      
+    }
+    public void ClosePVM(){
+      
+    }
+    public void CustomerComplains(){
+      
+    }
+    public void DiagnosticsRunning(){
+      
+    }
+    public void Idle(){
+      
+    }
+    public void MaintainanceModeOn(){
+      
+    }
+    public void OpenPVM(){
+      
+    }
+    public void OvenOn(){
+      
+    }
+    public void PVMClosed(){
+      
+    }
+    public void PVMMalfunctionAlert(){
+      
+    }
+    public void PVMOpenned(){
+      
+    }
+    public void PVMRepair(){
+      
+    }
+    public void PayByCardSelected(){
+      
+    }
+    public void PayByCashSelected(){
+      
+    }
+    public void PaymentReceived(){
+      
+    }
+    public void PizzaDelivered(){
+      
+    }
+    public void PizzaDone(){
+      
+    }
+    public void PutToppings(){
+      
+    }
+    public void RepairPVM(){
+      
+    }
+    public void RepairSuccessCheck(){
+      
+    }
+    public void RepairSuccessful(){
+      
+    }
+    public void RepairUnsuccessful(){
+      
+    }
+    public void RequestDiagnosis(){
+      
+    }
+    public void SettingsUpdated(){
+      
+    }
+    public void ShowRecieptAndPaymentOptions(){
+      
+    }
+    public void UpdateSettings(){
+      
+    }
+    public void PayClicked(){
+      
+    }
+    public void PickPizza(){
+      
+    }
+    public void SetToIdle(){
       
     }
     public static void main(String[] args) {
