@@ -14,8 +14,7 @@ import java.util.ArrayList;
 public class Order {
     int OrderNum;
     String OrderType;
-    ArrayList<Pizza> PizzaList;
-    Order order;
+    ArrayList<Pizza> PizzaList = new ArrayList();
 
     public ArrayList<Pizza> getPizzaList() {
         return PizzaList;
@@ -23,14 +22,6 @@ public class Order {
 
     public void setPizzaList(ArrayList<Pizza> PizzaList) {
         this.PizzaList = PizzaList;
-    }
-
-    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
     }
 
     public int getOrderNum() {

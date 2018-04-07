@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author amrsa
  */
 public class Menu {
-    ArrayList<Pizza> PizzaList;
+    ArrayList<Pizza> PizzaList = new ArrayList();
     
     public Menu(ArrayList<Pizza> PizzaList) {
         this.PizzaList = PizzaList;
@@ -21,17 +21,13 @@ public class Menu {
     public ArrayList<Pizza> getPizzaList() {
         return PizzaList;
     }
-
-    public void setPizzaList(ArrayList<Pizza> PizzaList) {
-        this.PizzaList = PizzaList;
-    }
     public void AddPizza(Pizza pizza) {
-        this.PizzaList = PizzaList;
+        PizzaList.add(pizza);
     }
     public void DeletePizza(Pizza pizza) {
-        this.PizzaList = PizzaList;
+        PizzaList.remove(pizza);
     }
-    public void UpdatePizza(Pizza pizza) {
-        this.PizzaList = PizzaList;
+    public void UpdatePizza(Pizza pizza, int index) {
+        PizzaList.set(index, pizza);
     }
 }

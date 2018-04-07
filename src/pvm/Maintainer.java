@@ -12,8 +12,10 @@ package pvm;
 public class Maintainer {
     private int ID;
     private static Maintainer admin;
+    
+    
 
-    public Maintainer() {
+    private Maintainer() {
     }
     
     
