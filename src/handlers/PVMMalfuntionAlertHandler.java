@@ -13,9 +13,11 @@ import pvm.PVM;
  * @author amrsa
  */
 public class PVMMalfuntionAlertHandler {
-
+    PVM pVM;
     public PVMMalfuntionAlertHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         this.pVM = pVM; 
     }
-    
+     public void update(PVMMalfuntionAlert event) {
+      //  pvm.requestFloor(floor);
+    }
 }

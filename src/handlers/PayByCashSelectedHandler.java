@@ -13,9 +13,11 @@ import pvm.PVM;
  * @author amrsa
  */
 public class PayByCashSelectedHandler {
-
+    PVM pVM;
     public PayByCashSelectedHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.pVM = pVM;
     }
-     
+      public void update(PayByCashSelected event) {
+      //  pvm.requestFloor(floor);
+    }
 }

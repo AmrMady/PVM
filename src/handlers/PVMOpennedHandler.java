@@ -13,9 +13,11 @@ import pvm.PVM;
  * @author amrsa
  */
 public class PVMOpennedHandler {
-
+    PVM pVM;
     public PVMOpennedHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         this.pVM = pVM; 
     }
-    
+     public void update(PVMOpenned event) {
+      //  pvm.requestFloor(floor);
+    }
 }
