@@ -13,9 +13,11 @@ import pvm.PVM;
  * @author amrsa
  */
 public class MaintainanceModeOnHandler {
-
+    PVM pVM;
     public MaintainanceModeOnHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.pVM = pVM; 
     }
-   
+    public void update(MaintainanceModeOn event) {
+      //  pvm.requestFloor(floor);
+    }
 }

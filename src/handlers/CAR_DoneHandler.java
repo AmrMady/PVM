@@ -13,9 +13,11 @@ import pvm.PVM;
  * @author amrsa
  */
 public class CAR_DoneHandler {
-
+        PVM pVM;
     public CAR_DoneHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          this.pVM = pVM; 
     }
-      
+       public void update(CAR_Done event) {
+      //  pvm.requestFloor(floor);
+    }
 }

@@ -13,9 +13,16 @@ import pvm.PVM;
  * @author amrsa
  */
 public class ActivatePVMHandler {
-
+    
+ private PVM pvm;
     public ActivatePVMHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.pvm = pvm;
     }
      
+
+ 
+
+    public void update(ActivatePVM event) {
+      //  pvm.requestFloor(floor);
+    }
 }

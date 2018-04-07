@@ -5,6 +5,7 @@
  */
 package handlers;
 
+import events.ActivateMaintainanceMode;
 import pvm.PVM;
 
 /**
@@ -13,8 +14,14 @@ import pvm.PVM;
  */
 public class ActivateMaintainanceModeHandler {
 
-    public ActivateMaintainanceModeHandler(PVM PVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     private PVM pvm;
+
+    public ActivateMaintainanceModeHandler(PVM pvm) {
+        this.pvm = pvm;
+    }
+
+    public void update(ActivateMaintainanceMode event) {
+      //  pvm.requestFloor(floor);
     }
     
 }
