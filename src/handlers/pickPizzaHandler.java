@@ -15,9 +15,13 @@ import pvm.Pizza;
  * @author amrsa
  */
 public class pickPizzaHandler {
+private PVM p ;
 
-    public pickPizzaHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public pickPizzaHandler(PVM p) {
+        this.p = p;
     }
- 
+
+    public void update(){
+    
+} 
 }

@@ -14,8 +14,13 @@ import pvm.PVM;
  */
 public class RepairSuccessfulHandler {
 
-    public RepairSuccessfulHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private PVM p;
+
+    public RepairSuccessfulHandler(PVM p) {
+        this.p = p;
     }
     
+   public void update(){
+    
+} 
 }

@@ -13,9 +13,13 @@ import pvm.PVM;
  * @author amrsa
  */
 public class RequestDiagnosisHandler {
+private PVM p;
 
-    public RequestDiagnosisHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public RequestDiagnosisHandler(PVM p) {
+        this.p = p;
     }
+
+   public void update(){
     
+} 
 }

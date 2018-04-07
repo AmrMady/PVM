@@ -13,9 +13,14 @@ import pvm.PVM;
  * @author amrsa
  */
 public class setToIdleHandler {
+ private PVM p ;
 
-    public setToIdleHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public setToIdleHandler(PVM p) {
+        this.p = p;
     }
+ 
+ public void update(){
     
+}  
+     
 }

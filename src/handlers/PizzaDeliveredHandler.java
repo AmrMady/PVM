@@ -14,8 +14,15 @@ import pvm.PVM;
  */
 public class PizzaDeliveredHandler {
 
-    public PizzaDeliveredHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  private PVM p;
+
+    public PizzaDeliveredHandler(PVM p) {
+        this.p = p;
     }
+
     
+
+   public void update(){
+    
+} 
 }

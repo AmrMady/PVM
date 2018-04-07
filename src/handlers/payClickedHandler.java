@@ -6,6 +6,7 @@
 package handlers;
 
 import events.*;
+import pvm.Order;
 import pvm.PVM;
 
 /**
@@ -13,9 +14,14 @@ import pvm.PVM;
  * @author amrsa
  */
 public class payClickedHandler {
+    private PVM p ;
 
     public payClickedHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.p = pVM;
+        
+       
     }
-    
+   public void update(){
+        
+    }
 }

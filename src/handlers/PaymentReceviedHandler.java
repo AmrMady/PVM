@@ -13,9 +13,14 @@ import pvm.PVM;
  * @author amrsa
  */
 public class PaymentReceviedHandler {
+private PVM p;
 
-    public PaymentReceviedHandler(PVM pVM) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public PaymentReceviedHandler(PVM p) {
+        this.p = p;
     }
+
+   public void update(){
+    
+} 
    
 }
