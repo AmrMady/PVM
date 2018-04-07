@@ -40,10 +40,10 @@ import handlers.*;
 public class Config {
 
     private EPServiceProvider engine;
-    private PVM PVM;
+    private PVM pVM;
 
-    public Config(PVM PVM) {
-        this.PVM = PVM;
+    public Config(PVM pVM) {
+        this.pVM = pVM;
     }
 
     public void init() {
@@ -128,164 +128,161 @@ public class Config {
         System.out.println("Creating EPLs [DONE]");
     }
 
-    private void createEPL_DoorClosedEvent() {
-       // EPStatement statement = engine.getEPAdministrator().createEPL(DoorClosedEvent.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
-    }
+   
 
     private void createEPL_ActivateMaintainanceMode() {
          EPStatement statement = engine.getEPAdministrator().createEPL(ActivateMaintainanceMode.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new ActivateMaintainanceModeHandler(pVM));
     }
 
     private void createEPL_ActivatePVM() {
         EPStatement statement = engine.getEPAdministrator().createEPL(ActivatePVM.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new ActivatePVMHandler(pVM));
     }
 
     private void createEPL_Baking() {
        EPStatement statement = engine.getEPAdministrator().createEPL(Baking.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new BakingHandler(pVM));
     }
 
     private void createEPL_CAR_Done() {
          EPStatement statement = engine.getEPAdministrator().createEPL(CAR_Done.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new CAR_DoneHandler(pVM));
     }
 
     private void createEPL_CleanAndRefill() {
         EPStatement statement = engine.getEPAdministrator().createEPL(CleanAndRefill.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new CleanAndRefillHandler(pVM));
     }
 
     private void createEPL_ClosePVM() {
         EPStatement statement = engine.getEPAdministrator().createEPL(ClosePVM.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new ClosePVMHandler(pVM));
     }
 
     private void createEPL_CustomerComplains() {
         EPStatement statement = engine.getEPAdministrator().createEPL(CustomerComplains.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new CustomerComplainsHandler(pVM));
     }
 
     private void createEPL_DiagnosticsRunning() {
          EPStatement statement = engine.getEPAdministrator().createEPL(DiagnosticsRunning.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+       statement.setSubscriber(new DiagnosticsRunningHandler(pVM));
     }
 
     private void createEPL_MaintainanceModeOn() {
          EPStatement statement = engine.getEPAdministrator().createEPL(MaintainanceModeOn.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new MaintainanceModeOnHandler(pVM));
     }
 
     private void createEPL_OpenPVM() {
          EPStatement statement = engine.getEPAdministrator().createEPL(OpenPVM.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new OpenPVMHandler(pVM));
     }
 
     private void createEPL_OvenOn() {
          EPStatement statement = engine.getEPAdministrator().createEPL(OvenOn.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new OvenOnHandler(pVM));
     }
 
     private void createEPL_PVMCLosed() {
         EPStatement statement = engine.getEPAdministrator().createEPL(PVMCLosed.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PVMCLosedHandler(pVM));
     }
 
     private void createEPL_PVMMalfuntionAlert() {
          EPStatement statement = engine.getEPAdministrator().createEPL(PVMMalfuntionAlert.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PVMMalfuntionAlertHandler(pVM));
     }
 
     private void createEPL_PVMOpenned() {
          EPStatement statement = engine.getEPAdministrator().createEPL(PVMOpenned.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PVMOpennedHandler(pVM));
     }
 
     private void createEPL_PVMRepair() {
          EPStatement statement = engine.getEPAdministrator().createEPL(PVMRepair.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PVMRepairHandler(pVM));
     }
 
     private void createEPL_PayByCardSelected() {
         EPStatement statement = engine.getEPAdministrator().createEPL(PayByCardSelected.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PayByCardSelectedHandler(pVM));
     }
 
     private void createEPL_PayByCashSelected() {
        EPStatement statement = engine.getEPAdministrator().createEPL(PayByCashSelected.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PayByCashSelectedHandler(pVM));
     }
 
     private void createEPL_PaymentRecevied() {
          EPStatement statement = engine.getEPAdministrator().createEPL(PaymentRecevied.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PaymentReceviedHandler(pVM));
     }
 
     private void createEPL_PizzaDelivered() {
          EPStatement statement = engine.getEPAdministrator().createEPL(PizzaDelivered.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PizzaDeliveredHandler(pVM));
     }
 
     private void createEPL_PizzaDone() {
          EPStatement statement = engine.getEPAdministrator().createEPL(PizzaDone.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new PizzaDoneHandler(pVM));
     }
 
     private void createEPL_RepairPVM() {
         EPStatement statement = engine.getEPAdministrator().createEPL(RepairPVM.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+       statement.setSubscriber(new RepairPVMHandler(pVM));
     }
 
     private void createEPL_RepairSuccessCheck() {
         EPStatement statement = engine.getEPAdministrator().createEPL(RepairSuccessCheck.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new RepairSuccessCheckHandler(pVM));
     }
 
     private void createEPL_RepairSuccessful() {
         EPStatement statement = engine.getEPAdministrator().createEPL(RepairSuccessful.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new RepairSuccessfulHandler(pVM));
     }
 
     private void createEPL_RepairUnsuccessful() {
          EPStatement statement = engine.getEPAdministrator().createEPL(RepairUnsuccessful.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new RepairUnsuccessfulHandler(pVM));
     }
 
     private void createEPL_RequestDiagnosis() {
          EPStatement statement = engine.getEPAdministrator().createEPL(RequestDiagnosis.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new RequestDiagnosisHandler(pVM));
     }
 
     private void createEPL_SettingsUpdated() {
         EPStatement statement = engine.getEPAdministrator().createEPL(SettingsUpdated.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new SettingsUpdatedHandler(pVM));
     }
 
     private void createEPL_ShowRecieptAndPaymentOptions() {
         EPStatement statement = engine.getEPAdministrator().createEPL(ShowRecieptAndPaymentOptions.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new ShowRecieptAndPaymentOptionsHandler(pVM));
     }
 
     private void createEPL_UpdateSettings() {
         EPStatement statement = engine.getEPAdministrator().createEPL(UpdateSettings.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new UpdateSettingsHandler(pVM));
     }
 
     private void createEPL_payClicked() {
          EPStatement statement = engine.getEPAdministrator().createEPL(payClicked.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new payClickedHandler(pVM));
     }
 
     private void createEPL_pickPizza() {
          EPStatement statement = engine.getEPAdministrator().createEPL(pickPizza.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new pickPizzaHandler(pVM));
     }
 
     private void createEPL_setToIdle() {
          EPStatement statement = engine.getEPAdministrator().createEPL(setToIdle.getStatement());
-       // statement.setSubscriber(new DoorClosedEventHandler(PVM));
+        statement.setSubscriber(new setToIdleHandler(pVM));
     }
 
 
