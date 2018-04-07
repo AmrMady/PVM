@@ -12,6 +12,12 @@ package pvm;
 public class Maintainer {
     private int ID;
     private static Maintainer admin;
+
+    public Maintainer() {
+    }
+    
+    
+    
     
     
     public static Maintainer Get_Instance(){
@@ -21,9 +27,6 @@ public class Maintainer {
         return admin;
     }
 
-    private Maintainer(){
-        
-    }
 
     public void setID(int ID) {
         this.ID = ID;
@@ -33,4 +36,17 @@ public class Maintainer {
         return ID;
     }
     
+    public void RunToolCheak(){
+        
+    }
+    
+    public void UpdateMennu(){
+        
+        
+    }
+        public double CollectMoney(){
+            double c =0;
+                    
+            return c;
+        }
 }

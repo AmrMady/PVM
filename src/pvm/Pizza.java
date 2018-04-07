@@ -15,7 +15,7 @@ public class Pizza {
     float price;
     String size;
     String type;
-    ArrayList<Topping> ToppingList;
+    ArrayList<Topping> ToppingList = new ArrayList();
 
     public float getPrice() {
         return price;
@@ -40,7 +40,9 @@ public class Pizza {
     public void setType(String type) {
         this.type = type;
     }
-    void addTopping(){
+    void addTopping(Topping p){
+        
+        ToppingList.add(p);
         
     }
 }
