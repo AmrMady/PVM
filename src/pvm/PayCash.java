@@ -9,7 +9,7 @@ package pvm;
  *
  * @author amrsa
  */
-public class PayCash {
+public class PayCash implements Pay{
     double amountGiven;
     double Change;
 
@@ -29,8 +29,11 @@ public class PayCash {
         this.Change = Change;
     }
     
-    void Payment (double aG){
-        
+    @Override
+    public void Payment (double aG){
+        Inventory c = new Inventory();
+        c.setCash(aG);
+        System.out.println("Cash added");
     }
     double GiveChange(){
         return Change;

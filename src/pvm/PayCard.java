@@ -29,6 +29,10 @@ public class PayCard {
         this.CardNum = CardNum;
     }
     void Payment(int CN, double aG){
+        PayCard p = new PayCard();
+        p.setCardNum(CN);
+        p.setAmountGiven(aG);
         
+        System.out.println("Cash "+p.getAmountGiven()+ " add from "+p.getCardNum());
     }
 }

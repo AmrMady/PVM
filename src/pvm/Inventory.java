@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author amrsa
  */
 public class Inventory {
-    double cash;
+    double cash = 0.0;
     int paste;
     ArrayList<Topping> toppings;
     int[] toppingsCap = new int [toppings.size()];
