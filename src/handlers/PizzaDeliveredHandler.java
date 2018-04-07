@@ -6,11 +6,16 @@
 package handlers;
 
 import events.*;
+import pvm.PVM;
 
 /**
  *
  * @author amrsa
  */
 public class PizzaDeliveredHandler {
+
+    public PizzaDeliveredHandler(PVM pVM) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

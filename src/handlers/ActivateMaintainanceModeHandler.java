@@ -5,10 +5,16 @@
  */
 package handlers;
 
+import pvm.PVM;
+
 /**
  *
  * @author amrsa
  */
 public class ActivateMaintainanceModeHandler {
+
+    public ActivateMaintainanceModeHandler(PVM PVM) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

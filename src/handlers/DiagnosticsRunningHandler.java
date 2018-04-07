@@ -6,11 +6,16 @@
 package handlers;
 
 import events.*;
+import pvm.PVM;
 
 /**
  *
  * @author amrsa
  */
 public class DiagnosticsRunningHandler {
+
+    public DiagnosticsRunningHandler(PVM pVM) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
       
 }

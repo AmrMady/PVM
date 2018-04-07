@@ -7,6 +7,7 @@ package handlers;
 
 
 import events.*;
+import pvm.PVM;
 import pvm.Pizza;
 
 /**
@@ -14,5 +15,9 @@ import pvm.Pizza;
  * @author amrsa
  */
 public class pickPizzaHandler {
+
+    public pickPizzaHandler(PVM pVM) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
  
 }
