@@ -16,7 +16,7 @@ public class Maintainer {
     
     public static Maintainer Get_Instance(){
         if (admin == null) {
-            admin = new Maintainer(ID);
+            admin = new Maintainer();
         }
         return admin;
     }
