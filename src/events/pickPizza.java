@@ -13,7 +13,7 @@ import pvm.Pizza;
  * @author amrsa
  */
 public class pickPizza {
-    private Pizza pizza;
+    private final Pizza pizza;
     
 
     public pickPizza(Pizza pizza) {

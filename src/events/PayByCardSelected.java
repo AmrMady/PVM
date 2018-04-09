@@ -5,13 +5,26 @@
  */
 package events;
 
+import pvm.PayCard;
+
 /**
  *
  * @author amrsa
  */
 public class PayByCardSelected {
+    
+       private final PayCard Card;
+    
+    public PayByCardSelected(PayCard Card) {
+
+        this.Card = Card;
+    }
+
+    public PayCard getCard() {
+        return Card;
+    }
     public static String getStatement() {
-        String statement = "select * from PayByCardSelected";
+        String statement = "select Card from PayByCardSelected";
         return statement;
     }
 }

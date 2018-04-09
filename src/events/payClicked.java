@@ -5,13 +5,25 @@
  */
 package events;
 
+import java.util.ArrayList;
+import pvm.Pizza;
+
 /**
  *
  * @author amrsa
  */
 public class payClicked {
+     private final ArrayList<Pizza> PizzaList;
+
+    public payClicked(ArrayList<Pizza> PizzaList) {
+        this.PizzaList = PizzaList;
+    }
+
+    public ArrayList<Pizza> getpayClicked() {
+        return PizzaList;
+    }
     public static String getStatement() {
-        String statement = "select * from payClicked";
+        String statement = "select PizzaList from payClicked";
         return statement;
     }
 }

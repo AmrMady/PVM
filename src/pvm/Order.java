@@ -22,8 +22,8 @@ public class Order {
 
     public void setPizzaList(ArrayList<Pizza> PizzaList) {
         this.PizzaList = PizzaList;
-    }
-
+    } 
+    
     public int getOrderNum() {
         return OrderNum;
     }

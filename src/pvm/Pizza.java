@@ -12,8 +12,8 @@ import java.util.ArrayList;
  * @author amrsa
  */
 public class Pizza {
-    float price;
-    String type;
+    public float price;
+    public String type;
     ArrayList<Topping> ToppingList = new ArrayList();
 
     public float getPrice() {
