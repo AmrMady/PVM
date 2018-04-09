@@ -16,7 +16,13 @@ public class Pizza {
     String type;
     ArrayList<Topping> ToppingList = new ArrayList();
 
-    public float getPrice() {
+
+    public Pizza(float price, String type) {
+        this.price = price;
+        this.type = type;
+    }
+    
+       public float getPrice() {
         return price;
     }
 

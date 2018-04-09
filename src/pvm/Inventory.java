@@ -14,20 +14,21 @@ import java.util.ArrayList;
 public class Inventory {
     double cash = 0.0;
     int paste  = 0;
-    ArrayList<Topping> toppings = new ArrayList();
-    int[] toppingsCap = new int [toppings.size()];
+    ArrayList<Topping> toppings = new ArrayList() ;
+    
     
 
     
-    void intializeToppings(){
-        for (int i = 0; i < toppings.size(); i++) {
-            toppingsCap[i] = 50;
-        }
-    }
+    void intializeToppings(Topping p){
+            toppings.add(p);
+     }
+    
     void refill(){
-        Inventory i = new Inventory();
-        i.setPaste(50);
-        i.intializeToppings();
+        this.setPaste(50);
+    
+        for (int i = 0; i < toppings.size(); i++) {
+            toppings.get(i).setCap(50);
+        }
     }
 
     public Inventory() {
@@ -48,5 +49,19 @@ public class Inventory {
         this.paste = paste;
     }
     
+    public void moveFromInventory(ArrayList<Pizza> PL){
+        for (int i = 0; i < PL.size(); i++) {
+            paste -=1;
+            System.out.println(this.getPaste());
+            for (int j = 0; j < toppings.size(); j++) {
+                if (PL.get(i).ToppingList.get(i).getName() == toppings.get(j).getName()) {
+                    toppings.get(j).setCap( toppings.get(j).getCap() - PL.get(i).ToppingList.get(i).getCap());
+                    toppings.get(j).getCap();
+                    System.out.println(this.toppings.get(j).getCap());
+                }
+ 
+            }
+        }
+    }
     
 }

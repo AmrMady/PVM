@@ -14,13 +14,7 @@ import java.util.ArrayList;
 public class Menu {
     ArrayList<Pizza> PizzaList = new ArrayList();
     
-    public Menu(ArrayList<Pizza> PizzaList) {
-        this.PizzaList = PizzaList;
-    }
-
-    public ArrayList<Pizza> getPizzaList() {
-        return PizzaList;
-    }
+    
     public void AddPizza(Pizza pizza) {
         PizzaList.add(pizza);
     }
@@ -29,5 +23,11 @@ public class Menu {
     }
     public void UpdatePizza(Pizza pizza, int index) {
         PizzaList.set(index, pizza);
+    }
+    
+    public void displayPizza(){
+        for (int i = 0; i < PizzaList.size(); i++) {
+            System.out.println(PizzaList.get(i).getType());
+        }
     }
 }

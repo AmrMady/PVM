@@ -12,6 +12,8 @@ package pvm;
 public class Maintainer {
     private int ID;
     private static Maintainer admin;
+    Menu menu = new Menu();
+    Inventory inv = new Inventory();
     
     
 
@@ -42,13 +44,29 @@ public class Maintainer {
         
     }
     
-    public void UpdateMennu(){
+    public Menu additem(Menu m , Pizza p){
         
+        m.AddPizza(p);
+        return m;
+    }
+    
+    public Menu Deleteiteam(Menu m, Pizza p){
+        
+        m.DeletePizza(p);
+        return m;
         
     }
-        public double CollectMoney(){
-            double c =0;
+    
+    public Menu UpdateMennu(Menu m,Pizza p , int i){
+        
+        m.UpdatePizza(p, i);
+        
+        return m ;
+    }
+        public double CollectMoney(Inventory i){
+            double X = i.getCash();
+            i.setCash(0);
                     
-            return c;
+            return X;
         }
 }

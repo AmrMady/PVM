@@ -16,23 +16,23 @@ public class PVM {
  private Maintainer maintainer;
  private Order order;
  private OrderController ordercontroller;
- private PayCard payCard;
- private PayCash payCash;
+private  Pay pay;
  private Pizza pipzza;
  private Topping topping;
  private EPServiceProvider engine;
 
-    public PVM(Inventory inventory, Maintainer maintainer, Order order, OrderController ordercontroller, PayCard payCard, PayCash payCash, Pizza pipzza, Topping topping, EPServiceProvider engine) {
+    public PVM(Inventory inventory, Maintainer maintainer, Order order, OrderController ordercontroller, Pay pay, Pizza pipzza, Topping topping, EPServiceProvider engine) {
         this.inventory = inventory;
         this.maintainer = maintainer;
         this.order = order;
         this.ordercontroller = ordercontroller;
-        this.payCard = payCard;
-        this.payCash = payCash;
+        this.pay = pay;
         this.pipzza = pipzza;
         this.topping = topping;
         this.engine = engine;
     }
+
+
 
 
     public void ActivateMaintainanceMode(){
@@ -84,7 +84,7 @@ public class PVM {
       
     }
     public void PayByCardSelected(){
-      
+     
     }
     public void PayByCashSelected(){
       
@@ -134,9 +134,5 @@ public class PVM {
     public void SetToIdle(){
       
     }
-    public static void main(String[] args) {
-           
-            
-    }
-    
+  
 }
