@@ -10,11 +10,25 @@ package pvm;
  * @author amrsa
  */
 public class Topping {
+    
+    
+   private String name ;
+   private int cap;
 
-    public Topping(String name) {
+    public Topping(String name, int cap) {
         this.name = name;
+        this.cap = cap;
     }
-    String name;
+
+    public void setCap(int cap) {
+        this.cap = cap;
+    }
+
+    public int getCap() {
+        return cap;
+    }
+    
+    
 
     public String getName() {
         return name;

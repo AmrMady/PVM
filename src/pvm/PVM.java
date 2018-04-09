@@ -30,13 +30,16 @@ public class PVM {
     private ArrayList<Pizza> PizzaList;
 
     public PVM(Inventory inventory, Maintainer maintainer, Order order, OrderController ordercontroller, PayCard payCard, PayCash payCash, Pizza pipzza, Topping topping, EPServiceProvider engine, ArrayList<Pizza> PizzaList) {
+
         this.inventory = inventory;
         this.maintainer = maintainer;
         this.order = order;
         this.ordercontroller = ordercontroller;
+
         this.payCard = payCard;
         this.payCash = payCash;
         this.pizza = pizza;
+
         this.topping = topping;
         this.engine = engine;
         this.PizzaList = PizzaList;
@@ -107,7 +110,9 @@ public class PVM {
 
     }
 
+
     public void PVMRepair() {
+
 
     }
 
@@ -192,8 +197,10 @@ public class PVM {
         engine.getEPRuntime().sendEvent(new pickPizza(pizza));
     }
 
+
     public void SetToIdle() {
 
     }
+
 
 }
