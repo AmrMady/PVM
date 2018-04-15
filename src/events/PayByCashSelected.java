@@ -5,13 +5,28 @@
  */
 package events;
 
+
+import pvm.PayCash;
+
 /**
  *
  * @author amrsa
  */
 public class PayByCashSelected {
+    private final PayCash Cash;
+    
+    public PayByCashSelected(PayCash Cash) {
+
+        this.Cash = Cash;
+    }
+
+    public PayCash getCash() {
+        return Cash;
+    }
+
+    
     public static String getStatement() {
-        String statement = "select * from PayByCashSelected";
+        String statement = "select Cash from PayByCashSelected";
         return statement;
     }
 }

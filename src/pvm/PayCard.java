@@ -25,6 +25,7 @@ public class PayCard {
         return CardNum;
     }
 
+
     public void setCardNum(int CardNum) {
         this.CardNum = CardNum;
     }
