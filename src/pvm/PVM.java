@@ -16,7 +16,7 @@ public class PVM {
  private Maintainer maintainer;
  private Order order;
  private OrderController ordercontroller;
-private  Pay pay;
+ private  Pay pay;
  private Pizza pipzza;
  private Topping topping;
  private EPServiceProvider engine;

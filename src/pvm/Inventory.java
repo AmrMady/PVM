@@ -54,7 +54,7 @@ public class Inventory {
             paste -=1;
             System.out.println(this.getPaste());
             for (int j = 0; j < toppings.size(); j++) {
-                if (PL.get(i).ToppingList.get(i).getName() == toppings.get(j).getName()) {
+                if (PL.get(i).ToppingList.get(j).getName() == toppings.get(j).getName()) {
                     toppings.get(j).setCap( toppings.get(j).getCap() - PL.get(i).ToppingList.get(i).getCap());
                     toppings.get(j).getCap();
                     System.out.println(this.toppings.get(j).getCap());

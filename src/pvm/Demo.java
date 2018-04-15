@@ -17,12 +17,13 @@ public class Demo {
     Maintainer main = Maintainer.Get_Instance() ;
     main.setID(1234);
           Topping topping1 = new Topping("tomato", 5);
-          Topping topping2 = new Topping("pepper ", 5);
+          Topping topping2 = new Topping("pepper", 5);
     Pizza pizza1 = new Pizza(9,"pepperoni");
     Pizza pizza2 = new Pizza(8, "seafood");
     Pizza pizza3 = new Pizza(5, "ff");
            pizza1.addTopping(topping2);
            pizza2.addTopping(topping1);
+           pizza2.addTopping(topping2);
            
            Menu menu = new Menu();
            menu = main.additem(menu, pizza2);
@@ -32,11 +33,13 @@ public class Demo {
            menu.displayPizza();
            
            Topping t1 = new Topping("tomato", 50);
+           Topping t2 = new Topping("pepper", 45);
            
            Inventory inv = new Inventory();
            inv.setCash(500);
            inv.setPaste(50);
            inv.intializeToppings(t1);
+           inv.intializeToppings(t2);
             
            
             ArrayList<Pizza> pizzaslist = new ArrayList() ; 
