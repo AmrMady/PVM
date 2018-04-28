@@ -21,7 +21,8 @@ private PVM p ;
         this.p = p;
     }
 
-    public void update(){
+    public void update(Pizza pizza){
+        p.PickPizza(pizza);
     
 } 
 }

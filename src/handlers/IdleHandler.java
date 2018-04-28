@@ -5,6 +5,7 @@
  */
 package handlers;
 
+import events.Idle;
 import pvm.PVM;
 
 /**
@@ -18,7 +19,7 @@ public class IdleHandler {
         this.p = p;
     }
  
- public void update(){
+ public void update(Idle e){
     
 } 
 }
