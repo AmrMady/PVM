@@ -30,10 +30,11 @@ public class PayCash implements Pay{
     }
     
     @Override
-    public void Payment (double aG){
-        Inventory c = new Inventory();
-        c.setCash(aG);
+    public void Payment (double aG,Inventory i){
+        
         System.out.println("Cash added");
+        
+        i.addcash(aG);
     }
     double GiveChange(){
         return Change;

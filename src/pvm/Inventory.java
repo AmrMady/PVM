@@ -12,27 +12,27 @@ import java.util.ArrayList;
  * @author amrsa
  */
 public class Inventory {
-    double cash = 0.0;
-    int paste  = 0;
-    ArrayList<Topping> toppings = new ArrayList() ;
-    
-    
 
-    
-    void intializeToppings(Topping p){
-            toppings.add(p);
-     }
-    
-    void refill(){
+    double cash = 0;
+    int paste = 0;
+    ArrayList<Topping> toppings = new ArrayList();
+
+    public Inventory() {
+
+    }
+
+    void intializeToppings(Topping p) {
+        toppings.add(p);
+    }
+
+    void refill() {
         this.setPaste(50);
-    
+
         for (int i = 0; i < toppings.size(); i++) {
             toppings.get(i).setCap(50);
         }
     }
 
-    public Inventory() {
-    }
     public double getCash() {
         return cash;
     }
@@ -48,20 +48,31 @@ public class Inventory {
     public void setPaste(int paste) {
         this.paste = paste;
     }
-    
-    public void moveFromInventory(ArrayList<Pizza> PL){
+
+    public void addcash(double cash) {
+
+        double x = this.getCash();
+        x += cash;
+        this.setCash(x);
+        System.out.println("updated to: " + this.getCash());
+    }
+
+    public void moveFromInventory(ArrayList<Pizza> PL) {
         for (int i = 0; i < PL.size(); i++) {
-            paste -=1;
-            System.out.println(this.getPaste());
-            for (int j = 0; j < toppings.size(); j++) {
-                if (PL.get(i).ToppingList.get(j).getName() == toppings.get(j).getName()) {
-                    toppings.get(j).setCap( toppings.get(j).getCap() - PL.get(i).ToppingList.get(i).getCap());
-                    toppings.get(j).getCap();
-                    System.out.println(this.toppings.get(j).getCap());
+            paste -= 1;
+            System.out.println("Paste" + this.getPaste());
+            for (int j = 0; j < PL.get(i).ToppingList.size(); j++) {
+                for (int k = 0; k < toppings.size(); k++) {
+
+                    if (PL.get(i).ToppingList.get(j).getName().equals(toppings.get(k).getName())) {
+                        toppings.get(k).setCap(toppings.get(k).getCap() - PL.get(i).ToppingList.get(j).getCap());
+                        toppings.get(k).getCap();
+                        System.out.println(j + " tooping " + this.toppings.get(j).getCap());
+                    }
                 }
- 
+
             }
         }
     }
-    
+
 }

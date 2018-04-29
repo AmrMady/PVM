@@ -15,18 +15,19 @@ import java.util.ArrayList;
  * @author amrsa
  */
 public class PVM {
- private Inventory inventory;
- private Maintainer maintainer;
- private Order order;
- private OrderController ordercontroller;
- private  Pay pay;
- private Topping topping;
+
+    private Inventory inventory;
+    private Maintainer maintainer;
+    private Order order;
+    private OrderController ordercontroller;
+    private Pay pay;
+    private Topping topping;
     private Boolean MenuOn = false;
     private Boolean ReceiptAndPaymentOptionsOn = false;
     private Pizza pizza;
     private ArrayList<Pizza> PizzaList;
 
- private EPServiceProvider engine;
+    private EPServiceProvider engine;
 
     public PVM(Inventory inventory, Maintainer maintainer, Order order, OrderController ordercontroller, Pay pay, Pizza pizza, Topping topping, EPServiceProvider engine, ArrayList<Pizza> PizzaList) {
 
@@ -51,9 +52,9 @@ public class PVM {
 
     public void Baking(int count) {
         for (int i = 0; i < count; i++) {
-            
+
         }
- 
+
     }
 
     public void CAR_Done() {
@@ -87,6 +88,7 @@ public class PVM {
     }
 
     public void OpenPVM() {
+        
 
     }
 
@@ -106,9 +108,7 @@ public class PVM {
 
     }
 
-
     public void PVMRepair() {
-
 
     }
 
@@ -118,14 +118,19 @@ public class PVM {
         payCard.Payment(CardNum, amountGiven);
         engine.getEPRuntime().sendEvent(new PayByCardSelected(payCard));*/
         PutToppings();
+        pay = new PayAdapter();
+        pay.Payment(amountGiven,inventory);
     }
 
-    public void PayByCashSelected(double amountGiven, double Change) {
-       /* payCash.setAmountGiven(amountGiven);
+    public void PayByCashSelected(double amountGiven) {
+        /* payCash.setAmountGiven(amountGiven);
         payCash.setChange(Change);
         payCash.Payment(amountGiven);
         engine.getEPRuntime().sendEvent(new PayByCashSelected(payCash));*/
-       PutToppings();
+        pay = new PayCash();
+        pay.Payment(amountGiven,inventory);
+        
+        PutToppings();
     }
 
     public void PaymentReceived() {
@@ -141,9 +146,9 @@ public class PVM {
     }
 
     public void PutToppings() {
-      ArrayList<Pizza> PList =   order.getPizzaList();
-      int count = PList.size();
-      inventory.moveFromInventory(PList);
+        ArrayList<Pizza> PList = order.getPizzaList();
+        int count = PList.size();
+        inventory.moveFromInventory(PList);
         Baking(count);
     }
 
@@ -193,10 +198,8 @@ public class PVM {
         engine.getEPRuntime().sendEvent(new pickPizza(pizza));
     }
 
-
     public void SetToIdle() {
 
     }
-
 
 }

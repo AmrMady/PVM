@@ -5,13 +5,15 @@
  */
 package pvm;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author amrsa
  */
 public class OrderController {
     int id;
-    Order order;
+    ArrayList<Order> orders = new ArrayList();
 
     public int getId() {
         return id;
@@ -20,16 +22,17 @@ public class OrderController {
     public void setId(int id) {
         this.id = id;
     }
-
-    public Order getOrder() {
-        return order;
+    
+    void addOrder (Order o){
+        orders.add(o);
+        
+    }
+    void display(){
+   
+        for (int i = 0; i < orders.size(); i++) {
+            System.out.println("Orders Number:"+ orders.get(i).getOrderNum());
+        }
+        
     }
 
-    public void setOrder(Order order) {
-        this.order = order;
-    }
-    public Order  GiveOrder(){
-        System.out.println("pvm.OrderController.GiveOrder()");
-        return order;
-    }
-}
+   }

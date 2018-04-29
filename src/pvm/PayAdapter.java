@@ -12,19 +12,20 @@ import java.util.Scanner;
  * @author ELECTRO
  */
 public class PayAdapter implements Pay{
-    PayCard c ;
+   protected PayCard c ;
     public PayAdapter(){
         c = new PayCard();
     }
 
     @Override
-    public void Payment(double cash) {
+    public void Payment(double cash, Inventory i) {
         System.out.println("Enter card number :");
         Scanner sc = new Scanner(System.in);
         int CardId = sc.nextInt();
         c.Payment(CardId, cash);
         
+        
     }
-            
+     
     
 }

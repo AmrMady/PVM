@@ -36,16 +36,30 @@ public class Demo {
            Topping t2 = new Topping("pepper", 45);
            
            Inventory inv = new Inventory();
-           inv.setCash(500);
+           inv.setCash(0.0);
            inv.setPaste(50);
-           inv.intializeToppings(t1);
            inv.intializeToppings(t2);
+           inv.intializeToppings(t1);
             
            
             ArrayList<Pizza> pizzaslist = new ArrayList() ; 
             pizzaslist.add(pizza2);
+            pizzaslist.add(pizza1);
            
-           inv.moveFromInventory(pizzaslist);
+           //inv.moveFromInventory(pizzaslist);
+           Pay p = new PayCash();
+           p.Payment(12, inv);
+           System.out.println("cash "+ inv.getCash());
+           
+           p = new PayAdapter();
+           p.Payment(20, inv);
+           
+           Order o = new Order();
+           o.setOrderNum(11);
+           o.setOrderType("salame");
+           o.AddPizza(pizza1);
+           o.AddPizza(pizza2);
+           inv.moveFromInventory(o.ListOfPizza());
            
 }
 }

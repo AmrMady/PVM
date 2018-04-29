@@ -42,4 +42,13 @@ public class Order {
     void cancelOrder(){
         
     }
+    public void AddPizza(Pizza p){
+        PizzaList.add(p);
+    }
+    public ArrayList<Pizza> ListOfPizza(){
+        
+        return PizzaList;
+        
+    }
+    
 }

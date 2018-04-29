@@ -11,6 +11,6 @@ package pvm;
  */
 public interface Pay {
     
-    public void Payment(double cash);
+    public void Payment(double cash,Inventory i);
     
 }
