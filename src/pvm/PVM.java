@@ -6,6 +6,7 @@
 package pvm;
 
 import com.espertech.esper.client.EPServiceProvider;
+import com.espertech.esper.client.EPServiceProviderManager;
 import events.*;
 import handlers.*;
 import java.util.ArrayList;
@@ -29,6 +30,14 @@ public class PVM {
 
     private EPServiceProvider engine;
 
+    public PVM(Pizza pizza, ArrayList<Pizza> PizzaList, EPServiceProvider engine){
+        this.pizza = pizza;
+        this.PizzaList = PizzaList;
+        this.engine = engine;
+    }
+    
+
+
     public PVM(Inventory inventory, Maintainer maintainer, Order order, OrderController ordercontroller, Pay pay, Pizza pizza, Topping topping, EPServiceProvider engine, ArrayList<Pizza> PizzaList) {
 
         this.inventory = inventory;
@@ -39,7 +48,6 @@ public class PVM {
         this.pizza = pizza;
         this.topping = topping;
         this.engine = engine;
-        this.PizzaList = PizzaList;
     }
 
     public void ActivateMaintainanceMode() {
@@ -195,7 +203,7 @@ public class PVM {
     public void PickPizza(Pizza pizza) {
         System.out.println("Picked pizza: " + pizza);
         PizzaList.add(pizza);
-        engine.getEPRuntime().sendEvent(new pickPizza(pizza));
+        System.out.println(PizzaList.size());
     }
 
     public void SetToIdle() {

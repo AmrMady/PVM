@@ -5,6 +5,10 @@
  */
 package pvm;
 
+import com.espertech.esper.client.EPServiceProvider;
+import com.espertech.esper.client.EPServiceProviderManager;
+import esper.config.Config;
+import events.pickPizza;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +20,7 @@ public class Demo {
       public static void main(String[] args) {
     Maintainer main = Maintainer.Get_Instance() ;
     main.setID(1234);
-          Topping topping1 = new Topping("tomato", 5);
+          Topping topping1 = new Topping("tomato", 10);
           Topping topping2 = new Topping("pepper", 5);
     Pizza pizza1 = new Pizza(9,"pepperoni");
     Pizza pizza2 = new Pizza(8, "seafood");
@@ -32,14 +36,12 @@ public class Demo {
            menu = main.UpdateMennu(menu, pizza3, 0);
            menu.displayPizza();
            
-           Topping t1 = new Topping("tomato", 50);
-           Topping t2 = new Topping("pepper", 45);
+           
            
            Inventory inv = new Inventory();
-           inv.setCash(0.0);
-           inv.setPaste(50);
-           inv.intializeToppings(t2);
-           inv.intializeToppings(t1);
+           
+           
+           
             
            
             ArrayList<Pizza> pizzaslist = new ArrayList() ; 
